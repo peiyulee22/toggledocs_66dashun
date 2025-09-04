@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, Github, Chrome } from "lucide-react";
+import { ArrowRight, Github, Code } from "lucide-react";
 
 export const CTASection = () => {
   return (
@@ -17,8 +17,8 @@ export const CTASection = () => {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
             <Button size="lg" className="bg-primary hover:bg-primary/90 shadow-glow-primary group">
-              <Chrome className="mr-2 h-5 w-5" />
-              Get Chrome Extension
+              <Code className="mr-2 h-5 w-5" />
+              Get VS Code Extension
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Button>
             
@@ -34,12 +34,12 @@ export const CTASection = () => {
               <div className="text-sm text-muted-foreground">Lightweight, working prototype</div>
             </div>
             <div className="space-y-2">
-              <div className="font-semibold text-primary">Chrome & Edge</div>
-              <div className="text-sm text-muted-foreground">Cross-browser compatibility</div>
+              <div className="font-semibold text-primary">VS Code Native</div>
+              <div className="text-sm text-muted-foreground">Seamless editor integration</div>
             </div>
             <div className="space-y-2">
               <div className="font-semibold text-primary">AI-Powered</div>
-              <div className="text-sm text-muted-foreground">Smart summaries & updates</div>
+              <div className="text-sm text-muted-foreground">Automatic change detection</div>
             </div>
           </div>
         </Card>

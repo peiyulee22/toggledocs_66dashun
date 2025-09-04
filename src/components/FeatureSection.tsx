@@ -4,21 +4,21 @@ import { Card } from "@/components/ui/card";
 const features = [
   {
     icon: Zap,
-    title: "Speed Up Reading",
-    description: "TL;DR summaries and intelligent Q&A search to quickly find what you need in documentation.",
-    details: ["Instant summaries", "Smart search", "Context-aware answers"]
+    title: "Auto-Detect Changes",
+    description: "Instantly detects when you modify code and identifies which documentation needs updating.",
+    details: ["Real-time monitoring", "Smart change detection", "Context-aware analysis"]
   },
   {
     icon: RefreshCw,
-    title: "Easy Maintenance", 
-    description: "AI-suggested updates from Git diffs keep your docs current without manual effort.",
-    details: ["Auto-detect changes", "Suggest improvements", "Version tracking"]
+    title: "AI-Suggested Updates", 
+    description: "Provides intelligent recommendations for documentation updates based on your code changes.",
+    details: ["Smart suggestions", "Natural language updates", "Contextual improvements"]
   },
   {
     icon: FileText,
-    title: "Right-Hand Sidebar",
-    description: "Non-intrusive interface that appears only when toggled, preserving your workflow.",
-    details: ["Toggle on/off", "Sidebar interface", "No workflow disruption"]
+    title: "Seamless Integration",
+    description: "Works directly in VS Code with non-intrusive notifications and quick actions.",
+    details: ["Native VS Code UI", "Quick fixes", "No workflow disruption"]
   }
 ];
 
@@ -37,8 +37,8 @@ export const FeatureSection = () => {
             Why <span className="text-primary">ToggleDocs?</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Real-world tech teams struggle with slow, outdated documentation. 
-            ToggleDocs solves this with smart AI assistance when you need it.
+            Documentation gets outdated the moment you change code. 
+            ToggleDocs automatically detects changes and suggests updates in real-time.
           </p>
         </div>
 

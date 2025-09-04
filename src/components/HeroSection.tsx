@@ -21,20 +21,20 @@ export const HeroSection = () => {
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
             <span className="text-primary font-semibold">Smarter, Faster, Maintainable</span> Documentation.
             <br />
-            A browser extension that works like a VPN toggle—get AI-powered docs help only when you need it.
+            A VS Code extension that detects code changes and automatically helps you update documentation.
           </p>
 
           {/* Toggle Demo */}
           <div className="flex flex-col items-center space-y-8 mb-16">
             <div className="flex items-center space-x-6 p-8 rounded-2xl bg-card border border-border shadow-glow-secondary">
-              <span className="text-lg font-medium">ToggleDocs Extension</span>
+              <span className="text-lg font-medium">VS Code Extension</span>
               <ToggleSwitch 
                 isOn={isToggleOn} 
                 onToggle={setIsToggleOn}
                 className="scale-125"
               />
               <span className={`text-sm font-mono ${isToggleOn ? 'text-primary' : 'text-muted-foreground'}`}>
-                {isToggleOn ? 'Active' : 'Inactive'}
+                {isToggleOn ? 'Watching Changes' : 'Inactive'}
               </span>
             </div>
 
@@ -52,16 +52,16 @@ export const HeroSection = () => {
                 <div className="space-y-3 text-sm text-left">
                   <div className="flex items-center space-x-2">
                     <Search className="h-4 w-4 text-muted-foreground" />
-                    <span>TL;DR summaries</span>
+                    <span>Code change detected</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <Code className="h-4 w-4 text-muted-foreground" />
-                    <span>Q&A search</span>
+                    <span>Documentation analysis</span>
                   </div>
                   <div className="bg-code-bg rounded-lg p-3 font-mono text-xs">
-                    <div className="text-primary">// AI-suggested update</div>
-                    <div className="text-muted-foreground">Update README.md based on</div>
-                    <div className="text-muted-foreground">latest commits...</div>
+                    <div className="text-primary">// Suggested doc update</div>
+                    <div className="text-muted-foreground">function addUser() added</div>
+                    <div className="text-muted-foreground">Update API docs?</div>
                   </div>
                 </div>
               </div>

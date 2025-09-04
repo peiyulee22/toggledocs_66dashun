@@ -8,24 +8,24 @@ export const DemoSection = () => {
 
   const demos = {
     browser: {
-      title: "Browser Extension",
+      title: "Code Editor",
       icon: Monitor,
-      description: "Works seamlessly in Chrome and Edge"
+      description: "Real-time change detection in VS Code"
     },
     sidebar: {
-      title: "Smart Sidebar",
+      title: "Smart Notifications",
       icon: Sidebar, 
-      description: "Toggle-activated assistance panel"
+      description: "Non-intrusive update suggestions"
     },
     docs: {
-      title: "Documentation AI",
+      title: "Auto Documentation",
       icon: FileText,
-      description: "Intelligent summaries and updates"
+      description: "AI-powered documentation updates"
     },
     chat: {
-      title: "Q&A Interface",
+      title: "Quick Actions",
       icon: MessageSquare,
-      description: "Natural language doc queries"
+      description: "One-click documentation fixes"
     }
   };
 
@@ -66,38 +66,47 @@ export const DemoSection = () => {
               <p className="text-muted-foreground">{demos[activeDemo as keyof typeof demos].description}</p>
             </div>
 
-            {/* Mock Browser Interface */}
+            {/* Mock VS Code Interface */}
             <div className="bg-background rounded-lg border border-border overflow-hidden">
-              {/* Browser Header */}
-              <div className="bg-secondary px-4 py-3 flex items-center space-x-2">
-                <div className="flex space-x-1">
-                  <div className="w-3 h-3 bg-destructive rounded-full" />
-                  <div className="w-3 h-3 bg-yellow-500 rounded-full" />
-                  <div className="w-3 h-3 bg-green-500 rounded-full" />
+              {/* VS Code Header */}
+              <div className="bg-secondary px-4 py-2 flex items-center space-x-2 text-sm">
+                <div className="flex items-center space-x-2">
+                  <div className="w-3 h-3 bg-blue-500 rounded" />
+                  <span className="text-muted-foreground">VS Code</span>
                 </div>
-                <div className="flex-1 bg-input rounded px-3 py-1 text-sm text-muted-foreground">
-                  https://github.com/yourorg/project/docs
+                <div className="flex-1 flex items-center space-x-4">
+                  <span className="text-muted-foreground">src/api/users.ts</span>
+                  <span className="text-xs text-primary">● Modified</span>
                 </div>
-                <div className="text-xs text-muted-foreground">ToggleDocs: ON</div>
+                <div className="text-xs text-primary">ToggleDocs: Active</div>
               </div>
 
               {/* Content Area */}
               <div className="flex min-h-[400px]">
-                {/* Main Content */}
-                <div className="flex-1 p-6">
-                  <h1 className="text-2xl font-bold mb-4">Project Documentation</h1>
-                  <div className="space-y-4 text-muted-foreground">
-                    <p>Welcome to the project documentation. This guide will help you get started...</p>
-                    <div className="bg-code-bg p-4 rounded font-mono text-sm">
-                      <div className="text-primary"># Quick Start</div>
-                      <div>npm install project</div>
-                      <div>npm run dev</div>
-                    </div>
-                    <p>For more advanced usage, see the configuration section...</p>
+                {/* Code Editor */}
+                <div className="flex-1 p-4">
+                   <div className="bg-code-bg p-4 rounded font-mono text-sm">
+                     <div className="space-y-1">
+                       <div className="text-muted-foreground">1  export interface User &#123;</div>
+                       <div className="text-muted-foreground">2    id: string;</div>
+                       <div className="text-muted-foreground">3    name: string;</div>
+                       <div className="text-primary bg-primary/10 px-2 -mx-2">4  + email: string; // New field added</div>
+                       <div className="text-muted-foreground">5  &#125;</div>
+                       <div className="text-muted-foreground">6  </div>
+                       <div className="text-primary bg-primary/10 px-2 -mx-2">7  + export async function addUser(userData: User) &#123;</div>
+                       <div className="text-primary bg-primary/10 px-2 -mx-2">8  +   return await api.post('/users', userData);</div>
+                       <div className="text-primary bg-primary/10 px-2 -mx-2">9  + &#125;</div>
+                     </div>
+                   </div>
+                  
+                  {/* Notification */}
+                  <div className="mt-4 p-3 bg-primary/10 border border-primary/20 rounded flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
+                    <span className="text-sm">Documentation updates suggested</span>
                   </div>
                 </div>
 
-                {/* Sidebar */}
+                {/* Update Panel */}
                 <div className={`w-80 bg-card border-l border-border transition-all duration-500 ${
                   activeDemo === 'sidebar' || activeDemo === 'chat' || activeDemo === 'docs' 
                     ? 'translate-x-0' 
@@ -109,45 +118,48 @@ export const DemoSection = () => {
                         const IconComponent = demos[activeDemo as keyof typeof demos].icon;
                         return <IconComponent className="h-4 w-4 mr-2 text-primary" />;
                       })()}
-                      Docs Copilot
+                      ToggleDocs Assistant
                     </h3>
                   </div>
                   <div className="p-4 space-y-4">
                     {activeDemo === 'docs' && (
                       <>
-                        <div className="bg-primary/10 p-3 rounded">
-                          <div className="text-sm font-medium mb-1">TL;DR Summary</div>
+                         <div className="bg-primary/10 p-3 rounded">
+                          <div className="text-sm font-medium mb-1">Changes Detected</div>
                           <div className="text-xs text-muted-foreground">
-                            Quick start guide for setting up the project with npm commands.
+                            • Added email field to User interface<br />
+                            • New addUser function added
                           </div>
                         </div>
                         <div className="bg-yellow-500/10 p-3 rounded">
-                          <div className="text-sm font-medium mb-1">Suggested Update</div>
+                          <div className="text-sm font-medium mb-1">Suggested Updates</div>
                           <div className="text-xs text-muted-foreground">
-                            Add Docker setup based on recent commits
+                            Update API.md with new addUser endpoint
                           </div>
                         </div>
                       </>
                     )}
                     {activeDemo === 'chat' && (
                       <div className="space-y-3">
-                        <div className="bg-secondary p-3 rounded">
-                          <div className="text-sm">How do I configure the database?</div>
-                        </div>
-                        <div className="bg-primary/10 p-3 rounded">
-                          <div className="text-sm">Check the .env.example file and set DATABASE_URL...</div>
-                        </div>
+                        <Button size="sm" className="w-full justify-start">
+                          <FileText className="h-3 w-3 mr-2" />
+                          Update API Documentation
+                        </Button>
+                        <Button size="sm" variant="outline" className="w-full justify-start">
+                          <MessageSquare className="h-3 w-3 mr-2" />
+                          Add Usage Example
+                        </Button>
                       </div>
                     )}
                     {activeDemo === 'sidebar' && (
-                      <div className="space-y-2 text-sm">
-                        <div className="flex items-center space-x-2">
-                          <FileText className="h-4 w-4 text-primary" />
-                          <span>3 pages found</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <MessageSquare className="h-4 w-4 text-primary" />
-                          <span>Ask questions</span>
+                      <div className="space-y-3">
+                        <div className="p-3 bg-yellow-500/10 rounded">
+                          <div className="text-sm font-medium text-yellow-700 dark:text-yellow-300">
+                            Documentation Update Needed
+                          </div>
+                          <div className="text-xs text-muted-foreground mt-1">
+                            2 files may need updates
+                          </div>
                         </div>
                       </div>
                     )}
