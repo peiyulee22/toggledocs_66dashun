@@ -3,6 +3,7 @@
 ## Track & Problem Statement
 
 Track: Industry Track
+
 Problem Statement: Fix the Docs: Smarter, Faster, Maintainable Documentation for the Real World by iFAST
 
 In real-world tech environments, documentation is a critical but broken part of the software development lifecycle. Writing it is slow, repetitive, and often skipped. Reading it is painful, especially for new joiners. Maintaining it is impractical in fast-changing systems — documentation quickly becomes outdated, misleading, or irrelevant.
@@ -27,6 +28,7 @@ Java documentation gets outdated the moment you refactor methods or add paramete
 - Dual Platform Support
 
 VS Code Extension: inline documentation & sidebar suggestions.
+
 Browser Extension: Docs Copilot for summaries (TL;DR), Q&A, and suggested updates.
 
 ## Demo & Prototype
@@ -74,7 +76,7 @@ Always up-to-date content.
 
 AI-powered assistance for writing, reading, and maintaining docs.
 
-Roadmap (3 Months)
+## Our Roadmap (3 Months)
 
 - Lightweight, working prototype.
 
@@ -82,8 +84,8 @@ Roadmap (3 Months)
 
 - Browser/VS Code extensions refinement.
 
-- Beta release for internal testing with real Java projects.
+- internal testing with real Java projects.
 
-## Summary
+## We target: 
 
 ToggleDocs makes documentation smarter, faster, and always maintainable.
