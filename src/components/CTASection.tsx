@@ -12,19 +12,19 @@ export const CTASection = () => {
           </h2>
           
           <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-            Join the beta and be among the first to experience smarter, faster, maintainable documentation.
+            Join the beta for both VS Code Java extension and browser extension. Keep your Javadocs and README files synchronized.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
             <Button size="lg" className="bg-primary hover:bg-primary/90 shadow-glow-primary group">
               <Code className="mr-2 h-5 w-5" />
-              Get VS Code Extension
+              Get Java Extension
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Button>
             
             <Button variant="outline" size="lg" className="border-border hover:bg-secondary">
               <Github className="mr-2 h-5 w-5" />
-              View on GitHub
+              Browser Extension
             </Button>
           </div>
 
@@ -34,8 +34,8 @@ export const CTASection = () => {
               <div className="text-sm text-muted-foreground">Lightweight, working prototype</div>
             </div>
             <div className="space-y-2">
-              <div className="font-semibold text-primary">VS Code Native</div>
-              <div className="text-sm text-muted-foreground">Seamless editor integration</div>
+              <div className="font-semibold text-primary">Java-Focused</div>
+              <div className="text-sm text-muted-foreground">Javadoc and method tracking</div>
             </div>
             <div className="space-y-2">
               <div className="font-semibold text-primary">AI-Powered</div>

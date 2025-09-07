@@ -8,24 +8,24 @@ export const DemoSection = () => {
 
   const demos = {
     browser: {
-      title: "Code Editor",
+      title: "Java Editor",
       icon: Monitor,
-      description: "Real-time change detection in VS Code"
+      description: "Real-time Java code monitoring in VS Code"
     },
     sidebar: {
-      title: "Smart Notifications",
+      title: "Javadoc Assistant",
       icon: Sidebar, 
-      description: "Non-intrusive update suggestions"
+      description: "Smart Javadoc comment suggestions"
     },
     docs: {
-      title: "Auto Documentation",
+      title: "Auto README Updates",
       icon: FileText,
-      description: "AI-powered documentation updates"
+      description: "Automatic README synchronization"
     },
     chat: {
-      title: "Quick Actions",
+      title: "Quick Fixes",
       icon: MessageSquare,
-      description: "One-click documentation fixes"
+      description: "One-click documentation repairs"
     }
   };
 
@@ -75,7 +75,7 @@ export const DemoSection = () => {
                   <span className="text-muted-foreground">VS Code</span>
                 </div>
                 <div className="flex-1 flex items-center space-x-4">
-                  <span className="text-muted-foreground">src/api/users.ts</span>
+                  <span className="text-muted-foreground">src/main/java/UserService.java</span>
                   <span className="text-xs text-primary">● Modified</span>
                 </div>
                 <div className="text-xs text-primary">ToggleDocs: Active</div>
@@ -87,15 +87,14 @@ export const DemoSection = () => {
                 <div className="flex-1 p-4">
                    <div className="bg-code-bg p-4 rounded font-mono text-sm">
                      <div className="space-y-1">
-                       <div className="text-muted-foreground">1  export interface User &#123;</div>
-                       <div className="text-muted-foreground">2    id: string;</div>
-                       <div className="text-muted-foreground">3    name: string;</div>
-                       <div className="text-primary bg-primary/10 px-2 -mx-2">4  + email: string; // New field added</div>
-                       <div className="text-muted-foreground">5  &#125;</div>
-                       <div className="text-muted-foreground">6  </div>
-                       <div className="text-primary bg-primary/10 px-2 -mx-2">7  + export async function addUser(userData: User) &#123;</div>
-                       <div className="text-primary bg-primary/10 px-2 -mx-2">8  +   return await api.post('/users', userData);</div>
-                       <div className="text-primary bg-primary/10 px-2 -mx-2">9  + &#125;</div>
+                       <div className="text-muted-foreground">1  public class UserService &#123;</div>
+                       <div className="text-muted-foreground">2    private String name;</div>
+                       <div className="text-primary bg-primary/10 px-2 -mx-2">3  + private String email; // New field</div>
+                       <div className="text-muted-foreground">4  </div>
+                       <div className="text-primary bg-primary/10 px-2 -mx-2">5  + public User addUser(String name, String email) &#123;</div>
+                       <div className="text-primary bg-primary/10 px-2 -mx-2">6  +   return new User(name, email);</div>
+                       <div className="text-primary bg-primary/10 px-2 -mx-2">7  + &#125;</div>
+                       <div className="text-muted-foreground">8  &#125;</div>
                      </div>
                    </div>
                   
@@ -125,16 +124,16 @@ export const DemoSection = () => {
                     {activeDemo === 'docs' && (
                       <>
                          <div className="bg-primary/10 p-3 rounded">
-                          <div className="text-sm font-medium mb-1">Changes Detected</div>
+                          <div className="text-sm font-medium mb-1">Java Changes Detected</div>
                           <div className="text-xs text-muted-foreground">
-                            • Added email field to User interface<br />
-                            • New addUser function added
+                            • Added email field to UserService<br />
+                            • New addUser method with email parameter
                           </div>
                         </div>
                         <div className="bg-yellow-500/10 p-3 rounded">
-                          <div className="text-sm font-medium mb-1">Suggested Updates</div>
+                          <div className="text-sm font-medium mb-1">Suggested Javadoc</div>
                           <div className="text-xs text-muted-foreground">
-                            Update API.md with new addUser endpoint
+                            Add @param email documentation to method
                           </div>
                         </div>
                       </>
@@ -143,11 +142,11 @@ export const DemoSection = () => {
                       <div className="space-y-3">
                         <Button size="sm" className="w-full justify-start">
                           <FileText className="h-3 w-3 mr-2" />
-                          Update API Documentation
+                          Add Javadoc Comments
                         </Button>
                         <Button size="sm" variant="outline" className="w-full justify-start">
                           <MessageSquare className="h-3 w-3 mr-2" />
-                          Add Usage Example
+                          Update README.md
                         </Button>
                       </div>
                     )}
@@ -155,10 +154,10 @@ export const DemoSection = () => {
                       <div className="space-y-3">
                         <div className="p-3 bg-yellow-500/10 rounded">
                           <div className="text-sm font-medium text-yellow-700 dark:text-yellow-300">
-                            Documentation Update Needed
+                            Javadoc Update Needed
                           </div>
                           <div className="text-xs text-muted-foreground mt-1">
-                            2 files may need updates
+                            Method signature changed - docs missing
                           </div>
                         </div>
                       </div>

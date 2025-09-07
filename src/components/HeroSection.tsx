@@ -21,13 +21,13 @@ export const HeroSection = () => {
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
             <span className="text-primary font-semibold">Smarter, Faster, Maintainable</span> Documentation.
             <br />
-            A VS Code extension that detects code changes and automatically helps you update documentation.
+            Browser extension + VS Code extension for Java projects. Detects code changes and automatically suggests documentation updates.
           </p>
 
           {/* Toggle Demo */}
           <div className="flex flex-col items-center space-y-8 mb-16">
             <div className="flex items-center space-x-6 p-8 rounded-2xl bg-card border border-border shadow-glow-secondary">
-              <span className="text-lg font-medium">VS Code Extension</span>
+              <span className="text-lg font-medium">Java Project Monitor</span>
               <ToggleSwitch 
                 isOn={isToggleOn} 
                 onToggle={setIsToggleOn}
@@ -49,19 +49,20 @@ export const HeroSection = () => {
                   <Bot className="h-5 w-5 text-primary" />
                   <span className="font-semibold">Docs Copilot</span>
                 </div>
-                <div className="space-y-3 text-sm text-left">
+                  <div className="space-y-3 text-sm text-left">
                   <div className="flex items-center space-x-2">
                     <Search className="h-4 w-4 text-muted-foreground" />
-                    <span>Code change detected</span>
+                    <span>Java method modified</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <Code className="h-4 w-4 text-muted-foreground" />
-                    <span>Documentation analysis</span>
+                    <span>Javadoc analysis</span>
                   </div>
                   <div className="bg-code-bg rounded-lg p-3 font-mono text-xs">
-                    <div className="text-primary">// Suggested doc update</div>
-                    <div className="text-muted-foreground">function addUser() added</div>
-                    <div className="text-muted-foreground">Update API docs?</div>
+                    <div className="text-primary">/**</div>
+                    <div className="text-primary"> * @param email New parameter</div>
+                    <div className="text-primary"> */</div>
+                    <div className="text-muted-foreground">Update method docs?</div>
                   </div>
                 </div>
               </div>

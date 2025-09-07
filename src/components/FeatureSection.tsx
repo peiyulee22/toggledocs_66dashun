@@ -4,21 +4,21 @@ import { Card } from "@/components/ui/card";
 const features = [
   {
     icon: Zap,
-    title: "Auto-Detect Changes",
-    description: "Instantly detects when you modify code and identifies which documentation needs updating.",
-    details: ["Real-time monitoring", "Smart change detection", "Context-aware analysis"]
+    title: "Java Code Monitoring",
+    description: "Monitors Java projects for method updates, class renames, and parameter changes in real-time.",
+    details: ["Method signature tracking", "Class structure analysis", "Parameter monitoring"]
   },
   {
     icon: RefreshCw,
-    title: "AI-Suggested Updates", 
-    description: "Provides intelligent recommendations for documentation updates based on your code changes.",
-    details: ["Smart suggestions", "Natural language updates", "Contextual improvements"]
+    title: "Smart Doc Suggestions", 
+    description: "AI-powered suggestions for Javadoc comments, README updates, and API documentation.",
+    details: ["Javadoc auto-generation", "README synchronization", "API docs updates"]
   },
   {
     icon: FileText,
-    title: "Seamless Integration",
-    description: "Works directly in VS Code with non-intrusive notifications and quick actions.",
-    details: ["Native VS Code UI", "Quick fixes", "No workflow disruption"]
+    title: "Dual Platform Support",
+    description: "Works as both VS Code extension for Java and browser extension for web documentation.",
+    details: ["VS Code sidebar panel", "Inline documentation", "Browser docs copilot"]
   }
 ];
 
@@ -37,8 +37,8 @@ export const FeatureSection = () => {
             Why <span className="text-primary">ToggleDocs?</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Documentation gets outdated the moment you change code. 
-            ToggleDocs automatically detects changes and suggests updates in real-time.
+            Java documentation gets outdated the moment you refactor methods or add parameters. 
+            ToggleDocs monitors your code and keeps Javadocs, README files, and API docs synchronized.
           </p>
         </div>
 
