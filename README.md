@@ -1,54 +1,41 @@
-# Welcome to your Lovable project
+# ToggleDocs: Smarter, Faster, Maintainable Documentation
 
-## Project info
+## Track & Problem Statement
 
-**URL**: https://lovable.dev/projects/8485b0ee-9f22-42b4-bf6e-e4369b934e41
+Track: Industry Track
+Problem Statement: Fix the Docs: Smarter, Faster, Maintainable Documentation for the Real World by iFAST
 
-## How can I edit this code?
+In real-world tech environments, documentation is a critical but broken part of the software development lifecycle. Writing it is slow, repetitive, and often skipped. Reading it is painful, especially for new joiners. Maintaining it is impractical in fast-changing systems — documentation quickly becomes outdated, misleading, or irrelevant.
 
-There are several ways of editing your application.
+This leads to onboarding delays, wasted engineering time, and avoidable bugs.
 
-**Use Lovable**
+ToggleDocs addresses this by providing a smart documentation assistant that integrates directly into developers’ workflows.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/8485b0ee-9f22-42b4-bf6e-e4369b934e41) and start prompting.
+## Why ToggleDocs?
 
-Changes made via Lovable will be committed automatically to this repo.
+Java documentation gets outdated the moment you refactor methods or add parameters. ToggleDocs monitors your code and keeps Javadocs, README files, and API docs synchronized.
 
-**Use your preferred IDE**
+## Key Features
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- Java Code Monitoring
+- Tracks method updates, class renames, and parameter changes in real-time.
+- Method signature tracking, class structure analysis, parameter monitoring.
+- Smart Documentation Suggestions
+- Auto-generates Javadoc comments.
+- Keeps README files synchronized.
+- Updates API documentation.
+- Dual Platform Support
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+VS Code Extension: inline documentation & sidebar suggestions.
+Browser Extension: Docs Copilot for summaries (TL;DR), Q&A, and suggested updates.
 
-Follow these steps:
+## Demo & Prototype
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+What you’ll see:
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- VS Code Simulator showing real-time Java monitoring.
+- Docs Copilot with TL;DR summaries, Q&A, and suggested doc updates.
+- Auto-generated Javadoc comments applied to Java classes.
 
 ## What technologies are used for this project?
 
@@ -60,14 +47,43 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
-## How can I deploy this project?
+## Getting Started
 
-Simply open [Lovable](https://lovable.dev/projects/8485b0ee-9f22-42b4-bf6e-e4369b934e41) and click on Share -> Publish.
+```sh
+# Step 1: Clone the repository
+git clone <YOUR_GIT_URL>
+open terminal
 
-## Can I connect a custom domain to my Lovable project?
+# Install dependencies
+npm install
 
-Yes, you can!
+# Run the development server
+npm run dev
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+# Open the demo
+Visit http://localhost:xxxx to try the prototype.
+```
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## Outcomes
+
+With ToggleDocs, developers can expect:
+
+Faster documentation discovery.
+
+Always up-to-date content.
+
+AI-powered assistance for writing, reading, and maintaining docs.
+
+Roadmap (3 Months)
+
+- Lightweight, working prototype.
+
+- Java-focused doc monitoring (Javadoc + methods).
+
+- Browser/VS Code extensions refinement.
+
+- Beta release for internal testing with real Java projects.
+
+## Summary
+
+ToggleDocs makes documentation smarter, faster, and always maintainable.
